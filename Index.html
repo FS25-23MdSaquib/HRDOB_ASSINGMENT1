@@ -3,162 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retaining and Redeploying Talent: Strategic Notes</title>
+    <title>Retaining and Redeploying Talent</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* Basic styling for the page */
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #F3F4F6; /* A light gray background */
         }
-        .note-card {
-            display: flex;
-            flex-direction: column;
+        /* Custom font for handwritten-style headings */
+        .font-handwriting {
+            font-family: 'Kalam', cursive;
+        }
+        /* Styling for the sticky notes */
+        .sticky-note {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            position: relative; /* Needed for the pin positioning */
+        }
+        /* Fun hover effect for the sticky notes */
+        .sticky-note:hover {
+            transform: scale(1.05) rotate(0deg) !important; /* Straighten and enlarge on hover */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            z-index: 10;
+        }
+        /* Styling for the pushpin icon */
+        .pin {
+            position: absolute;
+            top: -12px; /* Position it slightly above the note */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 32px;
+            height: 32px;
+            color: #EF4444; /* Red color for the pin */
+            filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="antialiased text-gray-800">
 
-    <!-- Main Container -->
     <div class="container mx-auto p-4 sm:p-6 md:p-8">
-
-        <!-- Header -->
-        <header class="text-center mb-8 md:mb-12">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">Retaining & Redeploying Talent</h1>
-            <p class="mt-3 text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">A Strategic Approach to Employee and Executive Training</p>
+        <!-- Main Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 font-handwriting">Retaining & Redeploying Talent</h1>
+            <p class="mt-2 text-lg text-gray-600">A Strategic Approach to Employee & Executive Training</p>
         </header>
 
-        <!-- Notes Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <!-- Grid container for all the sticky notes -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
 
             <!-- Note 1: Introduction -->
-            <div class="bg-indigo-100 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 note-card">
-                <div class="flex items-center mb-4">
-                    <div class="bg-indigo-500 p-2 rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    </div>
-                    <h2 class="text-xl font-bold text-indigo-800 ml-3">Introduction</h2>
+            <div class="sticky-note p-6 rounded-lg bg-yellow-200" style="transform: rotate(-2deg);">
+                <div class="pin">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C9.243 2 7 4.243 7 7v2.586l-2.293 2.293A1 1 0 004 12.586V19a2 2 0 002 2h12a2 2 0 002-2v-6.414a1 1 0 00-.293-.707L17 9.586V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v2H9V7z"></path></svg>
                 </div>
-                <p class="text-indigo-900">
-                    In today's dynamic and competitive business environment, human capital is the most valuable asset for any organization. The ability to attract, develop, and retain talented employees and executives is crucial for long-term success. However, simply hiring the right people is not enough. Organizations must invest in their growth and development to ensure they have the skills and knowledge needed to adapt to changing market demands. This assignment explores the critical role of training and development in retaining and redeploying employees and executives. It examines various methods and techniques that organizations can use to create a culture of continuous learning, foster employee loyalty, and strategically manage their talent pool.
-                </p>
+                <h2 class="font-handwriting text-2xl font-bold mb-3 mt-4">Introduction</h2>
+                <p class="text-sm leading-relaxed">In today's competitive landscape, human capital is the ultimate asset. This assignment explores how strategic training is crucial for not just developing, but also retaining and redeploying valuable employees and executives, ensuring long-term organizational success.</p>
             </div>
 
             <!-- Note 2: Importance of Training -->
-            <div class="bg-blue-100 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 note-card">
-                <div class="flex items-center mb-4">
-                    <div class="bg-blue-500 p-2 rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    </div>
-                    <h2 class="text-xl font-bold text-blue-800 ml-3">The Importance of Training and Development</h2>
+            <div class="sticky-note p-6 rounded-lg bg-green-200" style="transform: rotate(1deg);">
+                <div class="pin">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C9.243 2 7 4.243 7 7v2.586l-2.293 2.293A1 1 0 004 12.586V19a2 2 0 002 2h12a2 2 0 002-2v-6.414a1 1 0 00-.293-.707L17 9.586V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v2H9V7z"></path></svg>
                 </div>
-                <p class="text-blue-900 mb-4">
-                    Training and development are no longer considered a cost but a strategic investment in an organization's future. A well-designed training program can lead to a multitude of benefits, including:
-                </p>
-                <ul class="space-y-2 list-disc list-inside text-blue-900">
-                    <li><b>Improved Employee Performance:</b> Training equips employees with the necessary skills and knowledge to perform their jobs more effectively, leading to increased productivity and quality of work.</li>
-                    <li><b>Enhanced Employee Engagement and Morale:</b> When employees feel that their organization is invested in their growth, they are more likely to be engaged, motivated, and committed to their work.</li>
-                    <li><b>Increased Employee Retention:</b> Employees who have opportunities for growth and development are less likely to leave an organization in search of better prospects.</li>
-                    <li><b>Greater Adaptability and Innovation:</b> A culture of continuous learning enables organizations to adapt to new technologies, market trends, and business challenges more effectively.</li>
-                    <li><b>Stronger Leadership Pipeline:</b> Executive development programs are essential for identifying and grooming future leaders, ensuring a smooth succession process.</li>
+                <h2 class="font-handwriting text-2xl font-bold mb-3 mt-4">Why Invest in Training?</h2>
+                <ul class="list-disc list-inside text-sm space-y-2">
+                    <li><span class="font-semibold">Boosts Performance:</span> Better skills lead to higher productivity.</li>
+                    <li><span class="font-semibold">Enhances Engagement:</span> Shows employees they are valued.</li>
+                    <li><span class="font-semibold">Increases Retention:</span> Growth opportunities reduce turnover.</li>
+                    <li><span class="font-semibold">Fosters Innovation:</span> Creates a culture of continuous learning.</li>
+                    <li><span class="font-semibold">Builds Leaders:</span> Develops a strong succession pipeline.</li>
                 </ul>
             </div>
 
             <!-- Note 3: Employee Training Methods -->
-            <div class="bg-green-100 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 note-card">
-                <div class="flex items-center mb-4">
-                     <div class="bg-green-500 p-2 rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2 1M4 7l2-1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" /></svg>
-                    </div>
-                    <h2 class="text-xl font-bold text-green-800 ml-3">Methods and Techniques for Employee Training</h2>
+            <div class="sticky-note p-6 rounded-lg bg-pink-200" style="transform: rotate(-1.5deg);">
+                <div class="pin">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C9.243 2 7 4.243 7 7v2.586l-2.293 2.293A1 1 0 004 12.586V19a2 2 0 002 2h12a2 2 0 002-2v-6.414a1 1 0 00-.293-.707L17 9.586V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v2H9V7z"></path></svg>
                 </div>
-                <p class="text-green-900 mb-4">
-                    There are a variety of training methods that organizations can use to develop their employees' skills and knowledge. The choice of method will depend on the specific learning objectives, the target audience, and the available resources. Some of the most common methods include:
-                </p>
-                <ul class="space-y-2 list-disc list-inside text-green-900">
-                    <li><b>On-the-Job Training (OJT):</b> This is the most common form of training, where employees learn by doing their jobs under the guidance of a more experienced colleague or supervisor. OJT is cost-effective and provides hands-on experience, but it can be unstructured and inconsistent if not properly managed.</li>
-                    <li><b>Classroom-Based Training:</b> This traditional method involves a trainer delivering a presentation or leading a workshop in a classroom setting. It is an effective way to deliver a large amount of information to a group of people, but it can be passive and may not be suitable for all learning styles.</li>
-                    <li><b>E-Learning:</b> With the advancement of technology, e-learning has become a popular training method. It includes a wide range of online learning resources, such as courses, videos, and simulations. E-learning is flexible, cost-effective, and can be accessed anytime, anywhere.</li>
-                    <li><b>Mentoring and Coaching:</b> Mentoring and coaching are one-on-one relationships where a more experienced employee provides guidance and support to a less experienced colleague. This is a powerful way to develop an employee's skills, knowledge, and confidence.</li>
-                    <li><b>Job Rotation:</b> This involves moving employees between different jobs within an organization. It is an effective way to broaden their skills and knowledge, as well as to identify their strengths and weaknesses.</li>
-                </ul>
+                <h2 class="font-handwriting text-2xl font-bold mb-3 mt-4">Training Techniques</h2>
+                <p class="text-sm leading-relaxed">A blended approach works best: <span class="font-semibold">On-the-Job Training</span> for practical skills, <span class="font-semibold">E-Learning</span> for flexibility, <span class="font-semibold">Mentoring/Coaching</span> for personalized growth, and <span class="font-semibold">Job Rotation</span> to build versatile talent.</p>
             </div>
 
-            <!-- Note 4: Executive Development Programs -->
-            <div class="bg-purple-100 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 note-card">
-                <div class="flex items-center mb-4">
-                    <div class="bg-purple-500 p-2 rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
-                    </div>
-                    <h2 class="text-xl font-bold text-purple-800 ml-3">Executive Development Programs</h2>
+            <!-- Note 4: Executive Development -->
+            <div class="sticky-note p-6 rounded-lg bg-purple-200 text-gray-800" style="transform: rotate(2.5deg);">
+                <div class="pin">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C9.243 2 7 4.243 7 7v2.586l-2.293 2.293A1 1 0 004 12.586V19a2 2 0 002 2h12a2 2 0 002-2v-6.414a1 1 0 00-.293-.707L17 9.586V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v2H9V7z"></path></svg>
                 </div>
-                <p class="text-purple-900 mb-4">
-                    Executive development programs are designed to prepare high-potential employees for leadership roles. These programs typically focus on developing a range of skills, including:
-                </p>
-                <ul class="space-y-2 list-disc list-inside text-purple-900">
-                    <li><b>Strategic Thinking:</b> The ability to think critically and make sound decisions in complex situations.</li>
-                    <li><b>Leadership and Management:</b> The ability to inspire and motivate others, as well as to manage people and resources effectively.</li>
-                    <li><b>Communication and Interpersonal Skills:</b> The ability to communicate clearly and persuasively, as well as to build strong relationships with others.</li>
-                    <li><b>Financial Acumen:</b> The ability to understand and interpret financial information, as well as to make sound financial decisions.</li>
-                    <li><b>Global Mindset:</b> The ability to understand and appreciate different cultures, as well as to work effectively in a global business environment.</li>
-                </ul>
+                <h2 class="font-handwriting text-2xl font-bold mb-3 mt-4">Grooming Future Leaders</h2>
+                <p class="text-sm leading-relaxed">Executive programs focus on high-level skills: <span class="font-semibold">strategic thinking, leadership, financial acumen, and a global mindset</span>. This ensures a ready pipeline of talent to fill critical leadership roles and drive the company forward.</p>
             </div>
 
-            <!-- Note 5: Employee Retention Strategies -->
-            <div class="bg-yellow-100 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 note-card">
-                <div class="flex items-center mb-4">
-                    <div class="bg-yellow-500 p-2 rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
-                    </div>
-                    <h2 class="text-xl font-bold text-yellow-800 ml-3">Employee Retention Strategies</h2>
+            <!-- Note 5: Retention Strategies -->
+            <div class="sticky-note p-6 rounded-lg bg-blue-200 text-gray-800" style="transform: rotate(-2.5deg);">
+                <div class="pin">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C9.243 2 7 4.243 7 7v2.586l-2.293 2.293A1 1 0 004 12.586V19a2 2 0 002 2h12a2 2 0 002-2v-6.414a1 1 0 00-.293-.707L17 9.586V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v2H9V7z"></path></svg>
                 </div>
-                <p class="text-yellow-900 mb-4">
-                    Retaining talented employees is a major challenge for many organizations. However, by implementing the right strategies, organizations can create a positive and engaging work environment that encourages employees to stay. Some of the most effective retention strategies include:
-                </p>
-                <ul class="space-y-2 list-disc list-inside text-yellow-900">
-                    <li><b>Competitive Compensation and Benefits:</b> Offering a competitive salary and benefits package is essential for attracting and retaining top talent.</li>
-                    <li><b>Opportunities for Growth and Development:</b> As discussed earlier, providing opportunities for growth and development is a powerful way to retain employees.</li>
-                    <li><b>Positive Work Environment:</b> Creating a positive and supportive work environment where employees feel valued and respected is crucial for retention.</li>
-                    <li><b>Work-Life Balance:</b> Promoting a healthy work-life balance is important for employee well-being and can help to reduce stress and burnout.</li>
-                    <li><b>Recognition and Rewards:</b> Recognizing and rewarding employees for their contributions is a simple but effective way to show them that they are appreciated.</li>
-                </ul>
+                <h2 class="font-handwriting text-2xl font-bold mb-3 mt-4">How to Keep Your Talent</h2>
+                <p class="text-sm leading-relaxed">Beyond training, retention relies on <span class="font-semibold">competitive pay, a positive work culture, work-life balance, and consistent recognition</span>. Make your organization a place where people *want* to stay and grow.</p>
             </div>
 
-            <!-- Note 6: Redeployment as a Strategic Tool -->
-            <div class="bg-red-100 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 note-card">
-                <div class="flex items-center mb-4">
-                    <div class="bg-red-500 p-2 rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h5M20 20v-5h-5M4 20h5v-5M20 4h-5v5" /></svg>
-                    </div>
-                    <h2 class="text-xl font-bold text-red-800 ml-3">Redeployment as a Strategic Talent Management Tool</h2>
+            <!-- Note 6: Redeployment -->
+            <div class="sticky-note p-6 rounded-lg bg-orange-200 text-gray-800" style="transform: rotate(1.5deg);">
+                <div class="pin">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C9.243 2 7 4.243 7 7v2.586l-2.293 2.293A1 1 0 004 12.586V19a2 2 0 002 2h12a2 2 0 002-2v-6.414a1 1 0 00-.293-.707L17 9.586V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v2H9V7z"></path></svg>
                 </div>
-                <p class="text-red-900 mb-4">
-                    Redeployment is the process of moving employees from one role to another within the same organization. It is a strategic talent management tool that can be used to:
-                </p>
-                <ul class="space-y-2 list-disc list-inside text-red-900">
-                    <li>Retain valuable employees who might otherwise be made redundant.</li>
-                    <li>Fill skills gaps in other parts of the organization.</li>
-                    <li>Develop employees' skills and knowledge by giving them new challenges and opportunities.</li>
-                    <li>Increase organizational agility by creating a more flexible and adaptable workforce.</li>
-                </ul>
-                <p class="text-red-900 mt-4">For a redeployment strategy to be successful, it must be carefully planned and managed. This includes:</p>
-                 <ul class="space-y-2 list-disc list-inside text-red-900 mt-2">
-                    <li>Identifying suitable roles for the employees who are being redeployed.</li>
-                    <li>Providing the necessary training and support to help them transition into their new roles.</li>
-                    <li>Communicating clearly and openly with the employees throughout the process.</li>
-                </ul>
+                <h2 class="font-handwriting text-2xl font-bold mb-3 mt-4">Strategic Redeployment</h2>
+                <p class="text-sm leading-relaxed">Redeployment is a smart alternative to layoffs. It allows you to <span class="font-semibold">retain institutional knowledge, fill internal skill gaps, and build a more agile workforce</span> by moving valuable employees to new roles where they are needed most.</p>
             </div>
-
-            <!-- Note 7: Conclusion -->
-            <div class="bg-gray-700 text-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 note-card lg:col-start-2">
-                <div class="flex items-center mb-4">
-                     <div class="bg-gray-500 p-2 rounded-full">
-                       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                    </div>
-                    <h2 class="text-xl font-bold ml-3">Conclusion</h2>
+            
+             <!-- Note 7: Conclusion -->
+            <div class="sticky-note p-6 rounded-lg bg-teal-200 text-gray-800 md:col-span-2 lg:col-span-3" style="transform: rotate(-0.5deg);">
+                <div class="pin">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C9.243 2 7 4.243 7 7v2.586l-2.293 2.293A1 1 0 004 12.586V19a2 2 0 002 2h12a2 2 0 002-2v-6.414a1 1 0 00-.293-.707L17 9.586V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v2H9V7z"></path></svg>
                 </div>
-                <p class="text-gray-200">
-                    In conclusion, training and development are essential for retaining and redeploying employees and executives. By investing in their people, organizations can create a more skilled, engaged, and adaptable workforce that is better equipped to meet the challenges of the modern business world. The methods and techniques discussed in this assignment provide a framework for organizations to develop a comprehensive talent management strategy that will enable them to attract, develop, and retain the talent they need to succeed.
-                </p>
+                <h2 class="font-handwriting text-2xl font-bold mb-3 mt-4">Conclusion</h2>
+                <p class="text-sm leading-relaxed">Investing in people through continuous training, thoughtful retention efforts, and strategic redeployment is the cornerstone of a resilient and successful organization. It's a holistic talent strategy that pays dividends in skill, loyalty, and adaptability.</p>
             </div>
 
         </div>
